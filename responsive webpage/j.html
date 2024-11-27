@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Array Implementation</h1>
+    
+    <div class="result" id="result"></div>
+
+    <script>
+        // Step 1: Create an array
+        let fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+
+        // Step 2: Add an element to the end of the array
+        fruits.push('Grapes');
+        
+        // Step 3: Remove the last element of the array
+        let removedFruit = fruits.pop(); // Removes 'Grapes'
+
+        // Step 4: Add an element to the beginning of the array
+        fruits.unshift('Pineapple');
+
+        // Step 5: Remove the first element of the array
+        let firstFruit = fruits.shift(); // Removes 'Pineapple'
+
+        // Step 6: Iterate through the array
+        let output = 'Current Fruits in Array:<br>';
+        for (let i = 0; i < fruits.length; i++) {
+            output += `${i + 1}. ${fruits[i]}<br>`;
+        }
+
+        // Step 7: Show results in the HTML
+        output += `<br>Removed Fruit: ${removedFruit}<br>`;
+        output += `First Removed Fruit: ${firstFruit}`;
+        document.getElementById('result').innerHTML = output;
+    </script>
+</body>
+</html>
